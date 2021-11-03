@@ -38,5 +38,4 @@ program def get_indicator, rclass
 
 	  local baseurl =  "`baseurl'" + "&format=csv"
 	  import delimited "`baseurl'"
-
 end
