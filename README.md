@@ -4,6 +4,18 @@
 
 ****** allows Stata users to download over **  indicators from the World Bank databases, including: ***;
 
+### Install
+github install BID-DATA/idbsocialdata
+``` r
+net install idbsocialdata, from (https://github.com/BID-DATA/idbsocialdata/blob/main/)
+```
+
+## Examples
+``` r
+get_indicator, indicators("pobreza") countries("COL,ECU,BRA,URY") categories("area")
+```
+
+
 ### Parameters
 
 - countries(string): Countries and Regions Abbreviations and acronyms. 
@@ -17,11 +29,6 @@
 
 ## Blog Posts
 
-## Examples
-
-'''
-get_indicator, indicators("pobreza") countries("MEX")
-'''
 
 ## Suggested Citation
 

@@ -6,5 +6,5 @@ d
 d Distribution-Date:   20211103
 d License: MIT
 d 
-F idbsocialdata.ado
-f idbsocialdata-utils.ado
+F /src/idbsocialdata.ado
+f /src/idbsocialdata-utils.ado
