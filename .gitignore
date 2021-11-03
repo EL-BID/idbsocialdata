@@ -26,6 +26,7 @@
 # These files include GitHub settings
 !.gitignore
 !.gitattributes
+.!idbsocialdata.pkg
 make.do 
 
 # Keep markdown files used for documentation on GitHub
