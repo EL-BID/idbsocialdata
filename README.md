@@ -7,18 +7,29 @@
 ### Install
 github install BID-DATA/idbsocialdata
 ``` r
-. net install idbsocialdata, from (https://github.com/BID-DATA/idbsocialdata/blob/main/)
-
 net  install idbsocialdata, from("https://raw.githubusercontent.com/BID-DATA/idbsocialdata/main") replace
-
-github install BID-DATA/idbsocialdata
 ```
+
 
 ## Examples
-``` r
-get_indicator, indicators("pobreza") countries("COL,ECU,BRA,URY") categories("area")
 
+``` r
+clear
+idbsocialdata, indicators("pobreza") countries("COL,ECU,BRA,URY")
+twoway (scatter value year), scheme(s2color) by(country_name_es)
 ```
+![e_g](src/img/plot_egA.png)
+
+``` r
+sysuse auto, clear
+clear
+idbsocialdata, indicators("pobreza") countries("COL,ECU,BRA,URY") categories("sex")
+separate value, by(country_name_es) shortlabel
+set scheme s2color
+scatter value? year, ytitle(country_name_es) by(sex)
+```
+
+![e_g](src/img/plot_eg.png)
 
 ## 
 
