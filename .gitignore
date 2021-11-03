@@ -60,6 +60,7 @@ make.do
 !/src/**/*.sthlp
 !/src/**/*.dta
 !/src/**/*.txt
+!/src/**/*.jpg
 
 # Documentation
 !/doc/*.md
