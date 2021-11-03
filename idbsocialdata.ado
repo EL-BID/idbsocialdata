@@ -4,7 +4,7 @@
 * API end point to HTTPS
 *******************************************************************************
 
-program def get_indicator, rclass
+program def idbsocialdata, rclass
 	  version 9.0
 	  
 	  syntax [,countries(string)            ///
