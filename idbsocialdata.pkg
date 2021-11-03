@@ -1,0 +1,10 @@
+v 0.1.1
+d 'IDBSOCIALDATA': idbsocialdata
+d 
+d Stata module to access IADB SCLdata collections
+d 
+d Distribution-Date:   20211103
+d License: MIT
+d 
+F idbsocialdata.ado
+f idbsocialdata-utils.ado

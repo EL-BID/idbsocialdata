@@ -42,6 +42,7 @@ make.do
 !*/
 
 !stata.toc
+!idbsocialdata.pkg
 #######################
 # The following file types are code that should always be
 # included no matter where in the repository folder they are
