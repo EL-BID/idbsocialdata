@@ -9,7 +9,7 @@ github install BID-DATA/idbsocialdata
 ``` r
 . net install idbsocialdata, from (https://github.com/BID-DATA/idbsocialdata/blob/main/)
 
-net  install idbsocialdata, from("https://raw.githubusercontent.com/BID-DATA/idbsocialdata/main/src/") replace
+net  install idbsocialdata, from("https://raw.githubusercontent.com/BID-DATA/idbsocialdata/main") replace
 
 github install BID-DATA/idbsocialdata
 ```

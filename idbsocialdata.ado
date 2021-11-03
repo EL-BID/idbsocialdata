@@ -4,7 +4,6 @@
 * API end point to HTTPS
 *******************************************************************************
 
-capture program drop get_indicator
 program def get_indicator, rclass
 	  version 9.0
 	  
