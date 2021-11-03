@@ -18,7 +18,7 @@ clear
 idbsocialdata, indicators("pobreza") countries("COL,ECU,BRA,URY")
 twoway (scatter value year), scheme(s2color) by(country_name_es)
 ```
-![e_g](src/img/plot_egA.png)
+![e_g](src/img/plot_egA.jpg)
 
 ``` r
 sysuse auto, clear
@@ -29,7 +29,7 @@ set scheme s2color
 scatter value? year, ytitle(country_name_es) by(sex)
 ```
 
-![e_g](src/img/plot_eg.png)
+![e_g](src/img/plot_egB.jpg)
 
 ## 
 
