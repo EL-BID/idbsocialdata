@@ -41,6 +41,7 @@ make.do
 # the rules below will still not be ignored.
 !*/
 
+!stata.toc
 #######################
 # The following file types are code that should always be
 # included no matter where in the repository folder they are

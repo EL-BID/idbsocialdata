@@ -1,0 +1,7 @@
+v 0.1.1
+d Materials by SCLData
+d scldata@iadb.org
+
+d 'idbsocialdata': Stata module to access IADB SCLdata collections
+
+p idbsocialdata
