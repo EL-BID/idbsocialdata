@@ -16,11 +16,13 @@ net  install idbsocialdata, from("https://raw.githubusercontent.com/BID-DATA/idb
 
 ### Parameters
 
-- countries(string): Countries and Regions Abbreviations and acronyms. 
-- indicators(string): Indicators List list of indicator codes (All series). When selecting multiple indicators please use semicolon (;), to separate differenet indicatos.
+- countries(string): Countries and Regions acronyms (ISOALPHA-3 for countries). 
+- indicators(string): Indicators List list of indicator codes (All series).
 - categories(string):
 - startyear(string):
 - endyear(string):
+
+When selecting multiple values please use coma (,) to separate them
 
 ## Examples
 
