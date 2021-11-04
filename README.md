@@ -6,7 +6,7 @@ Stata module to access IADB SCLdata collections
 
 ### Install
 
-You can install the development version like so:
+Install the development version:
 
 
 ``` r
