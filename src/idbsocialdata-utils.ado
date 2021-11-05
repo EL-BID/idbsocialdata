@@ -4,8 +4,7 @@
 * API end point to HTTPS
 *******************************************************************************
 
-capture program drop get_indicator
-program def get_indicator, rclass
+program def getindicator, rclass
 	  version 9.0
 	  
 	  syntax [,countries(string)            ///
