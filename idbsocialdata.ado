@@ -15,6 +15,10 @@ program def idbsocialdata, rclass
 	   
 	  local baseurl = "https://scl.datamig.org/data?"
 	  
+	  if ("`indicators'"="") {
+				noi di  as err "Select at least one indicator"
+			}
+
 	  if ("`indicators'"!="") {
 				local baseurl = "`baseurl'" + "&indicators=" + "`indicators'"
 			}
