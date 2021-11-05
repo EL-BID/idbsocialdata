@@ -5,40 +5,43 @@
 *******************************************************************************
 
 program def idbsocialdata, rclass
-	  version 9.0
-	  
-	  syntax [,countries(string)            ///
-			   categories(string)         ///
-			   indicators(string)         ///
-			   yearstart(string)         ///
-			   yearend(string)]
-	   
-	  local baseurl = "https://scl.datamig.org/data?"
-	  
-	  if ("`indicators'"=="") {
-				noi di  as err "update query and update check options cannot be selected at the same time."
-			}
+	version 9.0
+	
+	syntax [,
+			indicators(string)         ///
+			countries(string)            ///
+			categories(string)         ///
+			yearstart(string)         ///
+			yearend(string)
+		]
+	
+	local baseurl = "https://scl.datamig.org/data?"
 
-	  if ("`indicators'"!="") {
-				local baseurl = "`baseurl'" + "&indicators=" + "`indicators'"
-			}
-			
-	  if ("`countries'"!="") {
-				local baseurl = "`baseurl'" + "&countries=" + "`countries'"
-			}
-			
-	  if ("`categories'"!="") {
-				local baseurl = "`baseurl'" + "&categories=" + "`categories'"
-			}
+	if missing(`"`indicators'"') {
+			noi di  as err "Select at least one indicator"
+			exit 198
+	}			
 
-	  if ("`yearstart'"!="") {
-				local baseurl = "`baseurl'" + "&yearstart=" + "`yearstart'"
-			}			
-	  if ("`yearend'"!="") {
-				local baseurl = "`baseurl'" + "&yearend=" + "`yearend'"
-			}
-			
+	if ("`indicators'"!="") {
+			local baseurl = "`baseurl'" + "&indicators=" + "`indicators'"
+		}
+		
+	if ("`countries'"!="") {
+			local baseurl = "`baseurl'" + "&countries=" + "`countries'"
+		}
+		
+	if ("`categories'"!="") {
+			local baseurl = "`baseurl'" + "&categories=" + "`categories'"
+		}
 
-	  local baseurl =  "`baseurl'" + "&format=csv"
-	  import delimited "`baseurl'"
+	if ("`yearstart'"!="") {
+			local baseurl = "`baseurl'" + "&yearstart=" + "`yearstart'"
+		}			
+	if ("`yearend'"!="") {
+			local baseurl = "`baseurl'" + "&yearend=" + "`yearend'"
+		}
+		
+
+	local baseurl =  "`baseurl'" + "&format=csv"
+	import delimited "`baseurl'"
 end
