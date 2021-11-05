@@ -4,7 +4,7 @@
 * API end point to HTTPS
 *******************************************************************************
 
-program def getindicator, rclass
+program def idbsocialdata, rclass
 	  version 9.0
 	  
 	  syntax [,countries(string)            ///
@@ -15,6 +15,10 @@ program def getindicator, rclass
 	   
 	  local baseurl = "https://scl.datamig.org/data?"
 	  
+	  if ("`indicators'"=="") {
+				noi di  as err "update query and update check options cannot be selected at the same time."
+			}
+
 	  if ("`indicators'"!="") {
 				local baseurl = "`baseurl'" + "&indicators=" + "`indicators'"
 			}
@@ -37,5 +41,4 @@ program def getindicator, rclass
 
 	  local baseurl =  "`baseurl'" + "&format=csv"
 	  import delimited "`baseurl'"
-
 end
