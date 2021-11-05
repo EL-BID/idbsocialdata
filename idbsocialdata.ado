@@ -15,8 +15,8 @@ program def idbsocialdata, rclass
 	   
 	  local baseurl = "https://scl.datamig.org/data?"
 	  
-	  if ("`indicators'"="") {
-				noi di  as err "Select at least one indicator"
+	  if ("`indicators'"=="") {
+				noi di  as err "update query and update check options cannot be selected at the same time."
 			}
 
 	  if ("`indicators'"!="") {
