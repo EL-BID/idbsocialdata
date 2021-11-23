@@ -5,38 +5,36 @@
 *******************************************************************************
 
 program def idbsocialdata, rclass
-	version 9.0
-	
-	syntax [,
-			indicators(string)         ///
-			countries(string)            ///
-			categories(string)         ///
-			yearstart(string)         ///
-			yearend(string)
-		]
-	
-	local baseurl = "https://scl.datamig.org/data?"
+	  version 9.0
+	  
+	  syntax [,countries(string)            ///
+			   categories(string)         ///
+			   indicators(string)         ///
+			   yearstart(string)         ///
+			   yearend(string)]
+	   
+	  local baseurl = "https://scl.datamig.org/data?"
+	  
+	  if ("`indicators'"!="") {
+				local baseurl = "`baseurl'" + "&indicators=" + "`indicators'"
+			}
+			
+	  if ("`countries'"!="") {
+				local baseurl = "`baseurl'" + "&countries=" + "`countries'"
+			}
+			
+	  if ("`categories'"!="") {
+				local baseurl = "`baseurl'" + "&categories=" + "`categories'"
+			}
 
-	if ("`indicators'"!="") {
-			local baseurl = "`baseurl'" + "&indicators=" + "`indicators'"
-		}
-		
-	if ("`countries'"!="") {
-			local baseurl = "`baseurl'" + "&countries=" + "`countries'"
-		}
-		
-	if ("`categories'"!="") {
-			local baseurl = "`baseurl'" + "&categories=" + "`categories'"
-		}
+	  if ("`yearstart'"!="") {
+				local baseurl = "`baseurl'" + "&yearstart=" + "`yearstart'"
+			}			
+	  if ("`yearend'"!="") {
+				local baseurl = "`baseurl'" + "&yearend=" + "`yearend'"
+			}
+			
 
-	if ("`yearstart'"!="") {
-			local baseurl = "`baseurl'" + "&yearstart=" + "`yearstart'"
-		}			
-	if ("`yearend'"!="") {
-			local baseurl = "`baseurl'" + "&yearend=" + "`yearend'"
-		}
-		
-
-	local baseurl =  "`baseurl'" + "&format=csv"
-	import delimited "`baseurl'"
+	  local baseurl =  "`baseurl'" + "&format=csv"
+	  import delimited "`baseurl'"
 end
