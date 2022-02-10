@@ -10,7 +10,7 @@ Install the development version:
 
 
 ``` r
-net  install idbsocialdata, from("https://raw.githubusercontent.com/BID-DATA/idbsocialdata/main") replace
+net  install idbsocialdata, from("https://raw.githubusercontent.com/EL-BID/idbsocialdata/main") replace
 ```
 
 
@@ -52,22 +52,3 @@ scatter value? year, ytitle(country_name_es) by(sex)
 ```
 
 ![e_g](src/img/plot_egB.jpg)
-
-## 
-
-
-## Disclaimer
-
-
-## Terms of use 
-
-
-## Blog Posts
-
-
-## Suggested Citation
-
-## Author: 
-
-  **SCLData**  
-
