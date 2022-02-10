@@ -13,9 +13,12 @@ Install the development version:
 net  install idbsocialdata, from("https://raw.githubusercontent.com/EL-BID/idbsocialdata/main") replace
 ```
 
+# Data
+
+With this function you can download any indicator from the SCLdata collections. You can browse this [dictionary](https://github.com/EL-BID/idbsocialdataR/blob/main/data/scldata_dict.csv) to see what is available.
+
 
 ### Parameters
-
 - countries(string): Countries and Regions acronyms (ISOALPHA-3 for countries). 
 - indicators(string): Indicators List list of indicator codes (All series).
 - categories(string):
