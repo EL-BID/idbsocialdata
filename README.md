@@ -1,4 +1,4 @@
-﻿# idbsocialdata: Stata module to access 
+# idbsocialdata: Stata module to access 
 Important: This package is in Beta - expect changes and updates
 
 ## Description
@@ -56,6 +56,9 @@ scatter value? year, ytitle(country_name_es) by(sex)
 ```
 
 ![e_g](src/img/plot_egB.jpg)
+
+### Author
+- [Roberto Sánchez A.](https://github.com/rsanchezavalos)
 
 
 ### Limitation of responsibilities
